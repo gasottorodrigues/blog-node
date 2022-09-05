@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('../components/header.ejs') %>
+</head>
+<body>
+    <%- include('../components/nav.ejs') %>
+    
+    <div class="details container">
+        <h2><%= blog.title %></h2>
+        <h3><%= blog.snippet %></h2>
+        <p><%=blog.body %></p>
+        <a class="delete" data-blog="<%= blog._id %>"><img src="/trash-can.svg" alt="Delete this" width="20px"></a>
+    </div>
+
+    <%- include('../components/footer.ejs') %>
+    <script>
+        const deleteButton = document.querySelector('.delete');
+
+        deleteButton.addEventListener('click',(event)=>{
+            const endPoint = `/blogs/${deleteButton.dataset.blog}`;
+
+            fetch(endPoint,{method: "DELETE"}).then((response)=> response.json()).then((data)=>{
+                window.location.href = data.redirect;
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
+        });
+    </script>
+</body>
+</html>

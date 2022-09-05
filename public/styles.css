@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+
+        font-family: 'Noto Serif',serif;
+    }
+
+    body{
+        width:100vw;
+        height:100vh;
+
+        position:relative;
+
+        background:#F7FFF7;
+        padding:0 200px;
+    }
+
+    nav{
+        display:flex;
+        justify-content: space-between;
+        width:100%;
+        border-bottom:1px solid #666;
+        margin-bottom:10px;
+    }
+
+    nav .title-container a{
+        color:#333;
+        text-decoration: none;
+        font-size:3rem;
+        
+    }
+
+    nav .title-container p{
+        color:#666;
+        font-size:1.5rem;
+        transform: translateY(-20px);
+    }
+
+    nav ul{
+        display:flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width:50%;
+    }
+    nav ul li{
+        list-style: none;
+        text-transform: uppercase;
+        text-align: center;
+        padding:5px 20px;
+    }
+
+    nav ul li a{
+        color:#333;
+        text-decoration: none;
+        font-weight: bold;
+        font-size:1.5rem;
+    }
+
+    nav ul li a:hover{
+        color:#666;
+    }
+
+    .container{
+        padding:30px 50px;
+    }
+
+    .container h2{
+        font-size:3rem;
+        color:#1A535C;
+        margin-bottom:30px;
+    }
+
+    .details{
+        position: relative;
+    }
+
+    .details h3{
+        font-size:1.5rem;
+        transform: translateY(-30px);
+        color:#333;
+    }
+
+    .details .delete{
+        position: absolute;
+        top:0;
+        right:0;
+        
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        width:40px;
+        height:40px;
+
+        border:1px solid #992d2d;
+        border-radius: 5px;
+        color:#992d2d;
+
+        cursor: pointer;
+        transition: 0.1s;
+    }
+
+    .details .delete:hover{
+        background-color: #992d2d;
+        color:#F7FFF7;
+    }
+    .container .error-msg{
+        display:block;
+        width:100%;
+        text-align: center;
+        color:#FF6B6B;
+        font-size: 4rem;
+    }
+
+    .blog-frame{
+        border-left:3px solid #FFE66D;
+        margin-bottom:10px;
+        padding:0 10px;
+
+        cursor: pointer;
+
+        transition:all 0.3s;
+    }
+
+    .blog-frame:hover{
+        transform: scale(1.01);
+        box-shadow:inset 100px 0 0 #FFE66D;
+    }
+
+    .blog-frame h3{
+        font-size:2rem;
+        color:#333;
+    }
+
+    .blog-frame p{
+        font-size:1.2rem;
+        color:#666;
+    }
+
+    .blog-link{
+        text-decoration: none;
+    }
+    form{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    form div{
+        margin-bottom:30px;
+    }
+
+    form label{
+        display:block;
+        color:#666;
+        font-size:1.2rem;
+        margin-bottom:5px;
+    }
+
+    form input, form textarea{
+        background-color: transparent;
+        width:50vw;
+        border:1px solid #666;
+        font-size:1.5rem;
+        padding:5px 8px;
+
+        color:#333;
+
+        transition: 0.3s;
+    }
+
+    form input#snippet{
+        font-size:1.1rem;
+    }
+
+    form textarea{
+        height:20vh;
+        resize: none;
+        font-size:0.9rem;
+        color:#444;
+    }
+
+    form input:focus,  form textarea:focus{
+        outline: none;
+        box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    }
+
+
+    .bt-div{
+        display: flex;
+        justify-content: flex-end;
+        width:50vw;
+    }
+
+    button{
+        background: #ff6b6b;
+        border:none;
+        padding:10px 15px;
+
+        color:#333;
+        text-transform: uppercase;
+        font-size:1.5rem;
+        font-weight: normal;
+
+        cursor: pointer;
+        transition: 0.25s;
+    }
+
+    button:active{
+        box-shadow: inset 3px 3px 2px #e25f5f;
+    }
+
+    /* input:focus + label , textarea:focus  + label{
+        color:#FFE66D;
+    } */
+
+    footer{
+        position:absolute;
+        bottom:0;
+
+        width:80%;
+
+        border-top:1px solid #666;
+        color:#333;
+        text-align: center;
+        padding:10px 0;
+    }
